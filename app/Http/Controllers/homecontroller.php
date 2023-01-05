@@ -18,6 +18,7 @@ class HomeController extends Controller
    
     public function index()
     {
+        return view('home');
 
     }
 
@@ -25,9 +26,31 @@ class HomeController extends Controller
     {
        return view('login');
     }
+    public function log_in(Request $request)
+    {
+        $user           = User::where('email',$request->email)->where('password', encrypt($request->password));
+        return redirect()->route('home');  
+    }
 
+    public function sign_in()
+    {
+
+        return view('register');
+
+
+    }
     public function register(Request $request)
     {
+        $user                         = new User;
+        $user->name                   = $request->name;
+        $user->email                  = $request->email;
+        $user->password               = $request->password;
+        $user->birthday               = $request->birthday;
+        $user->remeber_token          = $request->_token;
+        $user->email_verified_at      = date('Y-m-d H:m:s');
+        $user->save();
+
+        return redirect()->route('home');
 
     }
 

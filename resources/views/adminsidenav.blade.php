@@ -26,40 +26,52 @@
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link">
                             <i class="las la-shopping-cart aiz-side-nav-icon"></i>
-                            <span class="aiz-side-nav-text">{{('Movies')}}</span>
+                            <span class="aiz-side-nav-text">Movies</span>
                             <span class="aiz-side-nav-arrow"></span>
                         </a>
                         <!--Submenu-->
                         <ul class="aiz-side-nav-list level-2">
-                            <li class="aiz-side-nav-item">
-                                <a class="aiz-side-nav-link" >
-                                    <span class="aiz-side-nav-text">{{('Create a new movie')}}</span>
+                            {{-- <li class="aiz-side-nav-item">
+                                <a  class="aiz-side-nav-link" href="{{route('movie.create')}}">
+                                    <span class="aiz-side-nav-text">Create new Movie</span>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="aiz-side-nav-item">
-                                <a class="aiz-side-nav-link">
-                                    <span class="aiz-side-nav-text">{{('All Movies')}}</span>
+                                <a class="aiz-side-nav-link" href="{{route('movie.all')}}" >
+                                    <span class="aiz-side-nav-text">All Movies</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
+
+                <!-- movie -->
+                    <li class="aiz-side-nav-item">
+                        <a href="#" class="aiz-side-nav-link">
+                            <i class="las la-shopping-cart aiz-side-nav-icon"></i>
+                            <a  class="aiz-side-nav-link" href="{{route('category.all')}}">
+                                <span class="aiz-side-nav-text">All Categories</span>
+                            </a>
+                        </a>
+                    
+                    </li>
+                
                 
                 <!-- users -->
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link">
                             <i class="las la-user-friends aiz-side-nav-icon"></i>
-                            <span class="aiz-side-nav-text">{{ ('Users') }}</span>
+                            <span class="aiz-side-nav-text">Users</span>
                             <span class="aiz-side-nav-arrow"></span>
                         </a>
                         <ul class="aiz-side-nav-list level-2">
-                        <li class="aiz-side-nav-item">
-                                <a  class="aiz-side-nav-link">
-                                    <span class="aiz-side-nav-text">{{ ('Create new User') }}</span>
+                            <li class="aiz-side-nav-item">
+                                <a  class="aiz-side-nav-link" href="{{route('user.create')}}">
+                                    <span class="aiz-side-nav-text">Create new User</span>
                                 </a>
                             </li>
                             <li class="aiz-side-nav-item">
-                                <a  class="aiz-side-nav-link">
-                                    <span class="aiz-side-nav-text">{{ ('Users list') }}</span>
+                                <a  class="aiz-side-nav-link" href="{{route('user.all')}}">
+                                    <span class="aiz-side-nav-text">Users list</span>
                                 </a>
                             </li>
                         </ul>

@@ -9,7 +9,15 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <script src="{{ asset('js/app.js') }}" defer></script>
+       
+
+        <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
+        <link href = {{ asset("bootstrap/css/sticky-footer-navbar.css") }} rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}">
+<!-- Bootstrap CSS -->
+<link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+       
+
 
     </head>
         <!-- Styles -->
@@ -39,7 +47,7 @@
                         <a href="{{route('login')}}"  class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
                        
-                            <a href="{{route('register')}}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                            <a href="{{route('sign_in')}}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
                        
                     @endauth
                 </div>
@@ -48,5 +56,11 @@
 
           
         </div>
+
+
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/bootstrap.js') }}" defer></script>
+        <!-- Bootstrap Bundle with Popper -->
+<script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     </body>
 </html>

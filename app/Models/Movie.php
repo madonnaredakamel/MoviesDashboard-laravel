@@ -7,7 +7,7 @@ use App;
 
 class Movie extends Model
 {
-    protected $table                = 'movies';
+    protected $table                = 'movie';
     public function category(){
     	return $this->belongsTo(Category::class);
     }
