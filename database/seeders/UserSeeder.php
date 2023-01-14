@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
                 'birthday'=>date('Y-m-d H:i:s'),
                 'password' => bcrypt('password'),
                 'email_verified_at'=>date('Y-m-d H:i:s'),
-                'remeber_token'=>'ffffff',
+                'remember_token'=>'ffffff',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

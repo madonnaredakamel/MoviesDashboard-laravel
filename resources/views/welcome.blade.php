@@ -9,14 +9,25 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-       
+        
+
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.101.0">
 
         <link href = {{ asset("bootstrap/css/bootstrap.css") }} rel="stylesheet" />
         <link href = {{ asset("bootstrap/css/sticky-footer-navbar.css") }} rel="stylesheet" />
         <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}">
 <!-- Bootstrap CSS -->
-<link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+       <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+       <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
+
+    
+
+       <!-- Bootstrap core CSS -->
+   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
        
+   <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
 
     </head>
@@ -33,11 +44,94 @@
     </head>
     <body class="antialiased">
         {{-- @include('adminnavbar') --}}
-        @include('adminsidenav')
+       
+        <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow ">
+            <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Movies</a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <input class="form-control form-control-dark w-50" type="text" placeholder="Search" aria-label="Search">
+            <ul class="navbar-nav px-3">
+              
+              <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{{route('sign_in')}}">Sign in</a>
+              </li>
+              <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{{route('login')}}">Log in</a>
+              </li>
+            </ul>
+          </nav>
+          
+          <div class="container-fluid mt-3">
+            <div class="row">
+              <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">
+                        <span data-feather="home"></span>
+                        Dashboard <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <span data-feather="file"></span>
+                        Movies
+                      </a>
+                      <ul class="nav-item level-2">
+                        <li class="aiz-side-nav-item">
+                            <a class="aiz-side-nav-link" href="{{route('movie.all')}}">
+                                <span class="aiz-side-nav-text">All Movies</span>
+                            </a>
+                        </li>
+                        <li class="aiz-side-nav-item">
+                            <a class="aiz-side-nav-link" >
+                                <span class="aiz-side-nav-text">Create new movie</span>
+                            </a>
+                        </li>              
+                    </ul>
+        
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{route('category.all')}}">
+                        <span data-feather="shopping-cart"></span>
+                      All Categories
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <span data-feather="users"></span>
+                        Customers
+                      </a>
+                      <ul class="nav-item level-2">
+                        <li class="aiz-side-nav-item">
+                            <a class="aiz-side-nav-link" href="{{route('user.all')}}">
+                                <span class="aiz-side-nav-text">All Users</span>
+                            </a>
+                        </li>
+                        <li class="aiz-side-nav-item">
+                            <a class="aiz-side-nav-link" href="{{route('user.create')}}">
+                                <span class="aiz-side-nav-text">Create new user</span>
+                            </a>
+                        </li>              
+                    </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          
+             
+          
+                
+               
+              </main>
+            </div>
+          </div>
+          
        
 
 
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
            
 
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -55,12 +149,20 @@
         
 
           
-        </div>
+        </div> --}}
 
 
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/dashboard.js') }}" defer></script>
+
         <script src="{{ asset('js/bootstrap.js') }}" defer></script>
         <!-- Bootstrap Bundle with Popper -->
-<script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  
+        
+          <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     </body>
 </html>

@@ -1,3 +1,4 @@
+@include('welcome')
 
 <div class="h-100 bg-cover bg-center py-5 d-flex align-items-center">
     <div class="container">

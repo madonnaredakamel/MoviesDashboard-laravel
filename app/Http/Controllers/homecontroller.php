@@ -28,7 +28,7 @@ class HomeController extends Controller
     }
     public function log_in(Request $request)
     {
-        $user           = User::where('email',$request->email)->where('password', encrypt($request->password));
+        $user           = User::where('email',$request->email)->where('password', encrypt($request->password))->first();
         return redirect()->route('home');  
     }
 
@@ -46,7 +46,7 @@ class HomeController extends Controller
         $user->email                  = $request->email;
         $user->password               = $request->password;
         $user->birthday               = $request->birthday;
-        $user->remeber_token          = $request->_token;
+        $user->remember_token          = $request->_token;
         $user->email_verified_at      = date('Y-m-d H:m:s');
         $user->save();
 

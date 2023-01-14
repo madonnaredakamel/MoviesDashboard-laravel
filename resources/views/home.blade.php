@@ -1,2 +1,2 @@
-@include('adminsidenav');
+@include('welcome')
 

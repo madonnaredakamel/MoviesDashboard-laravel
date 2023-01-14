@@ -38,7 +38,7 @@ class UserController extends Controller
         $user->email                  = $request->email;
         $user->password               = $request->password;
         $user->birthday               = $request->birthday;
-        $user->remeber_token          = $request->_token;
+        $user->remember_token          = $request->_token;
         $user->email_verified_at      = date('Y-m-d H:m:s');
         $user->save();
 
